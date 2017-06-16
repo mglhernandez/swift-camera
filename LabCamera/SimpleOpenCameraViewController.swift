@@ -11,7 +11,7 @@ import AVFoundation
 import Photos
 import MobileCoreServices
 
-class ViewController: UIViewController {
+class SimpleOpenCameraViewController: UIViewController {
   
   
   @IBOutlet weak var imageView: UIImageView!
@@ -145,7 +145,7 @@ class ViewController: UIViewController {
   
 }
 
-extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension SimpleOpenCameraViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
     self.dismiss(animated: true, completion: nil)

@@ -6,13 +6,123 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="a9G-hO-9vP">
+            <objects>
+                <viewController id="KiJ-g5-t4T" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pLS-El-LIx"/>
+                        <viewControllerLayoutGuide type="bottom" id="lsM-bH-COR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="buN-zE-mA1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-x6-Z58">
+                                <rect key="frame" x="16" y="156" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="g0b-X9-Kmw"/>
+                                    <constraint firstAttribute="height" constant="50" id="h4H-QT-ODd"/>
+                                </constraints>
+                                <state key="normal" title="Simple open camera"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="OYx-Og-fEV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5D-ph-hao">
+                                <rect key="frame" x="16" y="257" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nmv-mj-ymK"/>
+                                    <constraint firstAttribute="width" constant="343" id="xyx-dI-aMD"/>
+                                </constraints>
+                                <state key="normal" title="Custom camera"/>
+                                <connections>
+                                    <segue destination="z1c-ev-GgU" kind="show" id="CBp-Y7-FEP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i5D-ph-hao" firstAttribute="top" secondItem="iWA-x6-Z58" secondAttribute="bottom" constant="51" id="5XY-Q2-wlt"/>
+                            <constraint firstItem="i5D-ph-hao" firstAttribute="centerX" secondItem="buN-zE-mA1" secondAttribute="centerX" id="Jvl-AX-rw1"/>
+                            <constraint firstItem="iWA-x6-Z58" firstAttribute="top" secondItem="pLS-El-LIx" secondAttribute="bottom" constant="92" id="bJl-Ju-nBK"/>
+                            <constraint firstItem="iWA-x6-Z58" firstAttribute="centerX" secondItem="buN-zE-mA1" secondAttribute="centerX" id="fgt-RK-wwJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1uX-cM-HfX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IyY-Ke-1TK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="32"/>
+        </scene>
+        <!--Custom Camera View Controller-->
+        <scene sceneID="515-cA-Lou">
+            <objects>
+                <viewController id="z1c-ev-GgU" customClass="CustomCameraViewController" customModule="LabCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t4s-8s-eSa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yrx-C5-piB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bMO-Ue-yXe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptc-kA-ESI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="456"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkD-cB-cln">
+                                <rect key="frame" x="25" y="552" width="37" height="30"/>
+                                <state key="normal" title="Flash"/>
+                                <connections>
+                                    <action selector="activatedFlash:" destination="z1c-ev-GgU" eventType="touchUpInside" id="pIT-Dy-nZw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tht-EA-uGf">
+                                <rect key="frame" x="295" y="552" width="55" height="30"/>
+                                <state key="normal" title="Capture"/>
+                                <connections>
+                                    <action selector="capturePicture:" destination="z1c-ev-GgU" eventType="touchUpInside" id="Gdj-mv-Ha0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrW-Ss-lZa">
+                                <rect key="frame" x="160.5" y="552" width="53" height="30"/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="changePicture:" destination="z1c-ev-GgU" eventType="touchUpInside" id="gbV-LJ-lPR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yrx-C5-piB" firstAttribute="top" secondItem="ptc-kA-ESI" secondAttribute="bottom" constant="211" id="4aI-mu-PDk"/>
+                            <constraint firstItem="Yrx-C5-piB" firstAttribute="top" secondItem="tht-EA-uGf" secondAttribute="bottom" constant="85" id="7JS-ej-9j7"/>
+                            <constraint firstItem="IkD-cB-cln" firstAttribute="leading" secondItem="bMO-Ue-yXe" secondAttribute="leadingMargin" constant="9" id="CBD-Na-d5Z"/>
+                            <constraint firstAttribute="trailing" secondItem="ptc-kA-ESI" secondAttribute="trailing" id="CZs-eI-v2B"/>
+                            <constraint firstItem="ptc-kA-ESI" firstAttribute="top" secondItem="bMO-Ue-yXe" secondAttribute="topMargin" id="Hl7-q6-G0p"/>
+                            <constraint firstItem="nrW-Ss-lZa" firstAttribute="centerX" secondItem="bMO-Ue-yXe" secondAttribute="centerX" id="PVf-Up-hhF"/>
+                            <constraint firstItem="Yrx-C5-piB" firstAttribute="top" secondItem="IkD-cB-cln" secondAttribute="bottom" constant="85" id="QJt-By-s7p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tht-EA-uGf" secondAttribute="trailing" constant="9" id="SZG-kz-g0o"/>
+                            <constraint firstItem="ptc-kA-ESI" firstAttribute="leading" secondItem="bMO-Ue-yXe" secondAttribute="leading" id="Twa-uH-k5G"/>
+                            <constraint firstItem="Yrx-C5-piB" firstAttribute="top" secondItem="nrW-Ss-lZa" secondAttribute="bottom" constant="85" id="a7q-8T-NDd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="ptc-kA-ESI" id="I5O-Qe-Fau"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NO2-mg-pQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="528.79999999999995" y="440.32983508245883"/>
+        </scene>
+        <!--Simple Open Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LabCamera" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SimpleOpenCameraViewController" customModule="LabCamera" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -55,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="128.80000000000001" y="25.637181409295355"/>
+            <point key="canvasLocation" x="530" y="-325"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ccg-KU-Zez">
@@ -66,12 +176,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ctO-Zb-IBN"/>
+                        <segue destination="KiJ-g5-t4T" kind="relationship" relationship="rootViewController" id="Hyc-4D-Gce"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sCq-Ou-TI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-721" y="26"/>
+            <point key="canvasLocation" x="-1378" y="32"/>
         </scene>
     </scenes>
 </document>

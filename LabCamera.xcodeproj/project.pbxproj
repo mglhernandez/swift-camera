@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		491E60201EF22D8500EC397F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E601F1EF22D8500EC397F /* AppDelegate.swift */; };
-		491E60221EF22D8500EC397F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E60211EF22D8500EC397F /* ViewController.swift */; };
+		491E60221EF22D8500EC397F /* SimpleOpenCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491E60211EF22D8500EC397F /* SimpleOpenCameraViewController.swift */; };
 		491E60251EF22D8500EC397F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491E60231EF22D8500EC397F /* Main.storyboard */; };
 		491E60271EF22D8500EC397F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491E60261EF22D8500EC397F /* Assets.xcassets */; };
 		491E602A1EF22D8500EC397F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491E60281EF22D8500EC397F /* LaunchScreen.storyboard */; };
+		49FEF2651EF3903B00EE3DE1 /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FEF2641EF3903B00EE3DE1 /* CustomCameraViewController.swift */; };
+		49FEF2671EF3905900EE3DE1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FEF2661EF3905900EE3DE1 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		491E601C1EF22D8500EC397F /* LabCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LabCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		491E601F1EF22D8500EC397F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		491E60211EF22D8500EC397F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		491E60211EF22D8500EC397F /* SimpleOpenCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleOpenCameraViewController.swift; sourceTree = "<group>"; };
 		491E60241EF22D8500EC397F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		491E60261EF22D8500EC397F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		491E60291EF22D8500EC397F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		491E602B1EF22D8500EC397F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49FEF2641EF3903B00EE3DE1 /* CustomCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraViewController.swift; sourceTree = "<group>"; };
+		49FEF2661EF3905900EE3DE1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				491E601F1EF22D8500EC397F /* AppDelegate.swift */,
-				491E60211EF22D8500EC397F /* ViewController.swift */,
+				491E60211EF22D8500EC397F /* SimpleOpenCameraViewController.swift */,
 				491E60231EF22D8500EC397F /* Main.storyboard */,
 				491E60261EF22D8500EC397F /* Assets.xcassets */,
 				491E60281EF22D8500EC397F /* LaunchScreen.storyboard */,
 				491E602B1EF22D8500EC397F /* Info.plist */,
+				49FEF2641EF3903B00EE3DE1 /* CustomCameraViewController.swift */,
+				49FEF2661EF3905900EE3DE1 /* HomeViewController.swift */,
 			);
 			path = LabCamera;
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				491E60221EF22D8500EC397F /* ViewController.swift in Sources */,
+				49FEF2651EF3903B00EE3DE1 /* CustomCameraViewController.swift in Sources */,
+				491E60221EF22D8500EC397F /* SimpleOpenCameraViewController.swift in Sources */,
 				491E60201EF22D8500EC397F /* AppDelegate.swift in Sources */,
+				49FEF2671EF3905900EE3DE1 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +310,7 @@
 				491E60301EF22D8500EC397F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
